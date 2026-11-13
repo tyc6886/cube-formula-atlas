@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ink-950: oklch(0.25 0.025 255);
+    --ink-700: oklch(0.46 0.025 255);
+    --ink-500: oklch(0.57 0.022 255);
+    --paper-0: oklch(0.995 0.003 240);
+    --paper-50: oklch(0.982 0.005 240);
+    --paper-100: oklch(0.963 0.007 240);
+    --blue-600: oklch(0.54 0.18 258);
+    --blue-50: oklch(0.965 0.025 258);
+    --line: oklch(0.91 0.01 250);
+    --background: var(--paper-50);
+    --foreground: var(--ink-950);
+    --card: var(--paper-0);
+    --card-foreground: var(--ink-950);
+    --popover: var(--paper-0);
+    --popover-foreground: var(--ink-950);
+    --primary: var(--blue-600);
+    --primary-foreground: var(--paper-0);
+    --secondary: var(--paper-100);
+    --secondary-foreground: var(--ink-950);
+    --muted: var(--paper-100);
+    --muted-foreground: var(--ink-500);
+    --accent: var(--blue-50);
+    --accent-foreground: var(--blue-600);
+    --destructive: oklch(0.55 0.2 25);
+    --destructive-foreground: var(--paper-0);
+    --border: var(--line);
+    --input: var(--line);
+    --ring: var(--blue-600);
+    --radius: 0.75rem;
+  }
+  * { box-sizing: border-box; border-color: var(--line); }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100dvh;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  button, input, select { font: inherit; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; opacity: 0.42; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3, p { margin: 0; }
+  h1, h2, h3 { line-height: 1.22; letter-spacing: -0.035em; }
+  code, .card-algorithm, .formula-large, .move-tokens { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+  :focus-visible { outline: 3px solid oklch(0.54 0.18 258 / 0.35); outline-offset: 3px; }
+  ::selection { background: oklch(0.88 0.07 258); }
+}
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
